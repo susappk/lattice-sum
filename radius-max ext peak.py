@@ -8,7 +8,7 @@ Created on Mon Dec  5 18:13:06 2016
 import numpy as np
 import matplotlib.pyplot as plt
 # 将两列数据分别导入x,y数组
-wavelength_nm,exp_n,exp_k,fdtd_n,fdtd_k=np.loadtxt(r"e:\py\Ag (Silver) - Palik (0-2um).txt",unpack='true')
+wavelength_nm,exp_n,exp_k,fdtd_n,fdtd_k=np.loadtxt(r"/Users/zhongguoxia/Desktop/Au (Gold) - Palik.txt",unpack='true')
 lam=wavelength_nm
 n=fdtd_n+1j*fdtd_k
 k_0=2*np.pi/(lam*1e-9)
@@ -29,6 +29,14 @@ k_s=k_0
 #propegater
 def G11(R):
     return np.exp(1j*k_s*R)/R/4/np.pi*(1+1j/k_s/R-1/k_s**2/R**2)
+    
+   
+    
+    
+    
+    
+    
+    
 
 frequency_sample=100
 radius_sample=50
